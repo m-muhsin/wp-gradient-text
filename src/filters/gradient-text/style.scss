@@ -1,0 +1,9 @@
+.is-filter-gradient-text {
+	color: transparent !important;
+	background-clip: text;
+	-webkit-background-clip: text;
+
+	> * {
+		position: unset;
+	}
+}
