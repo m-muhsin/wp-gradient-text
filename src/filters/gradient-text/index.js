@@ -20,13 +20,14 @@ const FilterBlocks = (settings) => {
 		attributes: {
 			...settings.attributes, // spread in old attributes so we don't lose them!
 			hasGradient: {
-				// Here is our new boolean attribute to know if we are having a griadent or not. We'll set a default of false.
+				// Here is our new boolean attribute to know if we are having a griadent or not.
 				type: "boolean",
 				default: false,
 			},
-			// Here is our new string attribute to hold the gradient colors. We'll set a default of empty string.
+			// Here is our new string attribute to hold the gradient colors.
 			gradientColors: {
 				type: "string",
+				default: "linear-gradient(135deg,#12c2e9 0%,#c471ed 50%,#f64f59 100%)",
 			},
 		},
 
