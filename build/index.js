@@ -69,7 +69,7 @@ const FilterBlocks = settings => {
           })
         }, has);
       }))), hasGradient && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)("Gradient Text")
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)("Choose Colors")
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.GradientPicker, {
         __nextHasNoMargin: true,
         value: gradientColors,

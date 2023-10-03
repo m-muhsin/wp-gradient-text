@@ -63,7 +63,7 @@ const FilterBlocks = (settings) => {
 							</ButtonGroup>
 						</PanelBody>
 						{hasGradient && (
-							<PanelBody title={__("Gradient Text")}>
+							<PanelBody title={__("Choose Colors")}>
 								<GradientPicker
 									__nextHasNoMargin
 									value={gradientColors}

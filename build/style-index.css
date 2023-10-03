@@ -5,6 +5,7 @@
   color: transparent !important;
   background-clip: text;
   -webkit-background-clip: text;
+  caret-color: black;
 }
 .is-filter-gradient-text > * {
   position: unset;
