@@ -70,6 +70,66 @@ const FilterBlocks = (settings) => {
 									onChange={(currentGradient) => setAttributes({ gradientColors: currentGradient })}
 									gradients={[
 										{
+											name: 'Default',
+											gradient:
+												'linear-gradient(135deg,#12c2e9 0%,#c471ed 50%,#f64f59 100%)',
+											slug: 'default',
+										},
+										{
+											name: 'Cool Sky',
+											gradient:
+												'linear-gradient(135deg,#2980b9 0%,#6dd5fa 50%,#ffffff 100%)',
+											slug: 'cool-sky',
+										},
+										{
+											name: 'Lunada',
+											gradient:
+												'linear-gradient(135deg,#5433FF 0%,#20BDFF 51%,#A5FECB 100%)',
+											slug: 'lunada',
+										},
+										{
+											name: 'Blue Raspberry',
+											gradient:
+												'linear-gradient(135deg,#00B4DB 0%,#0083B0 100%)',
+											slug: 'blue-raspberry',
+										},
+										{
+											name: 'Citrus Peel',
+											gradient:
+												'linear-gradient(135deg,#FDC830 0%,#F37335 100%)',
+											slug: 'citrus-peel',
+										},
+										{
+											name: 'Sin City Red',
+											gradient:
+												'linear-gradient(135deg,#ED213A 0%,#93291E 100%)',
+											slug: 'sin-city-red',
+										},
+										{
+											name: 'Blue Skies',
+											gradient:
+												'linear-gradient(135deg,#56CCF2 0%,#2F80ED 100%)',
+											slug: 'blue-skies',
+										},
+										{
+											name: 'Mango Pulp',
+											gradient:
+												'linear-gradient(135deg,#F09819 0%,#EDDE5D 100%)',
+											slug: 'mango-pulp',
+										},
+										{
+											name: 'Frozen',
+											gradient:
+												'linear-gradient(135deg,#403B4A 0%,#E7E9BB 100%)',
+											slug: 'frozen',
+										},
+										{
+											name: 'Rose Water',
+											gradient:
+												'linear-gradient(135deg,#E55D87 0%,#5FC3E4 100%)',
+											slug: 'rose-water',
+										},
+										{
 											name: 'JShine',
 											gradient:
 												'linear-gradient(135deg,#12c2e9 0%,#c471ed 50%,#f64f59 100%)',
