@@ -77,64 +77,65 @@ const FilterBlocks = settings => {
           gradientColors: currentGradient
         }),
         gradients: [{
-          name: 'Default',
-          gradient: 'linear-gradient(135deg,#12c2e9 0%,#c471ed 50%,#f64f59 100%)',
-          slug: 'default'
+          name: "JShine",
+          gradient: "linear-gradient(135deg,#12c2e9 0%,#c471ed 50%,#f64f59 100%)",
+          slug: "jshine"
         }, {
-          name: 'Cool Sky',
-          gradient: 'linear-gradient(135deg,#2980b9 0%,#6dd5fa 50%,#ffffff 100%)',
-          slug: 'cool-sky'
+          name: "Cool Sky",
+          gradient: "linear-gradient(135deg,#2980b9 0%,#6dd5fa 50%,#ffffff 100%)",
+          slug: "cool-sky"
         }, {
-          name: 'Lunada',
-          gradient: 'linear-gradient(135deg,#5433FF 0%,#20BDFF 51%,#A5FECB 100%)',
-          slug: 'lunada'
+          name: "Lunada",
+          gradient: "linear-gradient(135deg,#5433FF 0%,#20BDFF 51%,#A5FECB 100%)",
+          slug: "lunada"
         }, {
-          name: 'Blue Raspberry',
-          gradient: 'linear-gradient(135deg,#00B4DB 0%,#0083B0 100%)',
-          slug: 'blue-raspberry'
+          name: "Blue Raspberry",
+          gradient: "linear-gradient(135deg,#00B4DB 0%,#0083B0 100%)",
+          slug: "blue-raspberry"
         }, {
-          name: 'Citrus Peel',
-          gradient: 'linear-gradient(135deg,#FDC830 0%,#F37335 100%)',
-          slug: 'citrus-peel'
+          name: "Citrus Peel",
+          gradient: "linear-gradient(135deg,#FDC830 0%,#F37335 100%)",
+          slug: "citrus-peel"
         }, {
-          name: 'Sin City Red',
-          gradient: 'linear-gradient(135deg,#ED213A 0%,#93291E 100%)',
-          slug: 'sin-city-red'
+          name: "Sin City Red",
+          gradient: "linear-gradient(135deg,#ED213A 0%,#93291E 100%)",
+          slug: "sin-city-red"
         }, {
-          name: 'Blue Skies',
-          gradient: 'linear-gradient(135deg,#56CCF2 0%,#2F80ED 100%)',
-          slug: 'blue-skies'
+          name: "Blue Skies",
+          gradient: "linear-gradient(135deg,#56CCF2 0%,#2F80ED 100%)",
+          slug: "blue-skies"
         }, {
-          name: 'Mango Pulp',
-          gradient: 'linear-gradient(135deg,#F09819 0%,#EDDE5D 100%)',
-          slug: 'mango-pulp'
+          name: "Mango Pulp",
+          gradient: "linear-gradient(135deg,#F09819 0%,#EDDE5D 100%)",
+          slug: "mango-pulp"
         }, {
-          name: 'Frozen',
-          gradient: 'linear-gradient(135deg,#403B4A 0%,#E7E9BB 100%)',
-          slug: 'frozen'
+          name: "Frozen",
+          gradient: "linear-gradient(135deg,#403B4A 0%,#E7E9BB 100%)",
+          slug: "frozen"
         }, {
-          name: 'Rose Water',
-          gradient: 'linear-gradient(135deg,#E55D87 0%,#5FC3E4 100%)',
-          slug: 'rose-water'
+          name: "Rose Water",
+          gradient: "linear-gradient(135deg,#E55D87 0%,#5FC3E4 100%)",
+          slug: "rose-water"
         }, {
-          name: 'JShine',
-          gradient: 'linear-gradient(135deg,#12c2e9 0%,#c471ed 50%,#f64f59 100%)',
-          slug: 'jshine'
+          name: "Moonlit Asteroid",
+          gradient: "linear-gradient(135deg,#0F2027 0%, #203A43 0%, #2c5364 100%)",
+          slug: "moonlit-asteroid"
         }, {
-          name: 'Moonlit Asteroid',
-          gradient: 'linear-gradient(135deg,#0F2027 0%, #203A43 0%, #2c5364 100%)',
-          slug: 'moonlit-asteroid'
-        }, {
-          name: 'Rastafarie',
-          gradient: 'linear-gradient(135deg,#1E9600 0%, #FFF200 0%, #FF0000 100%)',
-          slug: 'rastafari'
+          name: "Rastafarie",
+          gradient: "linear-gradient(135deg,#1E9600 0%, #FFF200 0%, #FF0000 100%)",
+          slug: "rastafari"
         }]
       }))), hasGradient ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-        className: "is-filter-gradient-text",
-        style: {
-          backgroundImage: gradientColors
-        }
-      }, settings.edit(props)) : settings.edit(props));
+        className: "is-filter-gradient-text"
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", null, `
+									.is-filter-gradient-text > * {
+										-webkit-text-fill-color: transparent;
+										background: ${gradientColors};
+										-webkit-background-clip: text;
+										-webkit-box-decoration-break: clone;
+										color: black;
+									}
+								`), settings.edit(props)) : settings.edit(props));
     },
     save(props) {
       const {
@@ -145,11 +146,16 @@ const FilterBlocks = settings => {
         gradientColors
       } = attributes;
       return hasGradient ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-        className: "is-filter-gradient-text",
-        style: {
-          backgroundImage: gradientColors
-        }
-      }, settings.save(props)) : settings.save(props);
+        className: "is-filter-gradient-text"
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", null, `
+							.is-filter-gradient-text > * {
+								-webkit-text-fill-color: transparent;
+								background: ${gradientColors};
+								-webkit-background-clip: text;
+								-webkit-box-decoration-break: clone;
+								color: black;
+							}
+						`), settings.save(props)) : settings.save(props);
     }
   };
   return newSettings;

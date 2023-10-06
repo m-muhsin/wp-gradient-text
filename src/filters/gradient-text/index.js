@@ -67,85 +67,81 @@ const FilterBlocks = (settings) => {
 								<GradientPicker
 									__nextHasNoMargin
 									value={gradientColors}
-									onChange={(currentGradient) => setAttributes({ gradientColors: currentGradient })}
+									onChange={(currentGradient) =>
+										setAttributes({ gradientColors: currentGradient })
+									}
 									gradients={[
 										{
-											name: 'Default',
+											name: "JShine",
 											gradient:
-												'linear-gradient(135deg,#12c2e9 0%,#c471ed 50%,#f64f59 100%)',
-											slug: 'default',
+												"linear-gradient(135deg,#12c2e9 0%,#c471ed 50%,#f64f59 100%)",
+											slug: "jshine",
 										},
 										{
-											name: 'Cool Sky',
+											name: "Cool Sky",
 											gradient:
-												'linear-gradient(135deg,#2980b9 0%,#6dd5fa 50%,#ffffff 100%)',
-											slug: 'cool-sky',
+												"linear-gradient(135deg,#2980b9 0%,#6dd5fa 50%,#ffffff 100%)",
+											slug: "cool-sky",
 										},
 										{
-											name: 'Lunada',
+											name: "Lunada",
 											gradient:
-												'linear-gradient(135deg,#5433FF 0%,#20BDFF 51%,#A5FECB 100%)',
-											slug: 'lunada',
+												"linear-gradient(135deg,#5433FF 0%,#20BDFF 51%,#A5FECB 100%)",
+											slug: "lunada",
 										},
 										{
-											name: 'Blue Raspberry',
+											name: "Blue Raspberry",
 											gradient:
-												'linear-gradient(135deg,#00B4DB 0%,#0083B0 100%)',
-											slug: 'blue-raspberry',
+												"linear-gradient(135deg,#00B4DB 0%,#0083B0 100%)",
+											slug: "blue-raspberry",
 										},
 										{
-											name: 'Citrus Peel',
+											name: "Citrus Peel",
 											gradient:
-												'linear-gradient(135deg,#FDC830 0%,#F37335 100%)',
-											slug: 'citrus-peel',
+												"linear-gradient(135deg,#FDC830 0%,#F37335 100%)",
+											slug: "citrus-peel",
 										},
 										{
-											name: 'Sin City Red',
+											name: "Sin City Red",
 											gradient:
-												'linear-gradient(135deg,#ED213A 0%,#93291E 100%)',
-											slug: 'sin-city-red',
+												"linear-gradient(135deg,#ED213A 0%,#93291E 100%)",
+											slug: "sin-city-red",
 										},
 										{
-											name: 'Blue Skies',
+											name: "Blue Skies",
 											gradient:
-												'linear-gradient(135deg,#56CCF2 0%,#2F80ED 100%)',
-											slug: 'blue-skies',
+												"linear-gradient(135deg,#56CCF2 0%,#2F80ED 100%)",
+											slug: "blue-skies",
 										},
 										{
-											name: 'Mango Pulp',
+											name: "Mango Pulp",
 											gradient:
-												'linear-gradient(135deg,#F09819 0%,#EDDE5D 100%)',
-											slug: 'mango-pulp',
+												"linear-gradient(135deg,#F09819 0%,#EDDE5D 100%)",
+											slug: "mango-pulp",
 										},
 										{
-											name: 'Frozen',
+											name: "Frozen",
 											gradient:
-												'linear-gradient(135deg,#403B4A 0%,#E7E9BB 100%)',
-											slug: 'frozen',
+												"linear-gradient(135deg,#403B4A 0%,#E7E9BB 100%)",
+											slug: "frozen",
 										},
 										{
-											name: 'Rose Water',
+											name: "Rose Water",
 											gradient:
-												'linear-gradient(135deg,#E55D87 0%,#5FC3E4 100%)',
-											slug: 'rose-water',
+												"linear-gradient(135deg,#E55D87 0%,#5FC3E4 100%)",
+											slug: "rose-water",
 										},
 										{
-											name: 'JShine',
+											name: "Moonlit Asteroid",
 											gradient:
-												'linear-gradient(135deg,#12c2e9 0%,#c471ed 50%,#f64f59 100%)',
-											slug: 'jshine',
+												"linear-gradient(135deg,#0F2027 0%, #203A43 0%, #2c5364 100%)",
+											slug: "moonlit-asteroid",
 										},
 										{
-											name: 'Moonlit Asteroid',
+											name: "Rastafarie",
 											gradient:
-												'linear-gradient(135deg,#0F2027 0%, #203A43 0%, #2c5364 100%)',
-											slug: 'moonlit-asteroid',
-										},
-										{
-											name: 'Rastafarie',
-											gradient:
-												'linear-gradient(135deg,#1E9600 0%, #FFF200 0%, #FF0000 100%)',
-											slug: 'rastafari',
+												"linear-gradient(135deg,#1E9600 0%, #FFF200 0%, #FF0000 100%)",
+											slug: "rastafari",
 										},
 									]}
 								/>
@@ -153,9 +149,18 @@ const FilterBlocks = (settings) => {
 						)}
 					</InspectorControls>
 					{hasGradient ? (
-						<div
-							className="is-filter-gradient-text"
-							style={{ backgroundImage: gradientColors }}						>
+						<div className="is-filter-gradient-text">
+							<style>
+								{`
+									.is-filter-gradient-text > * {
+										-webkit-text-fill-color: transparent;
+										background: ${gradientColors};
+										-webkit-background-clip: text;
+										-webkit-box-decoration-break: clone;
+										color: black;
+									}
+								`}
+							</style>
 							{settings.edit(props)}
 						</div>
 					) : (
@@ -168,10 +173,18 @@ const FilterBlocks = (settings) => {
 			const { attributes } = props;
 			const { hasGradient, gradientColors } = attributes;
 			return hasGradient ? (
-				<div
-					className="is-filter-gradient-text"
-					style={{ backgroundImage: gradientColors }}
-				>
+				<div className="is-filter-gradient-text">
+					<style>
+						{`
+							.is-filter-gradient-text > * {
+								-webkit-text-fill-color: transparent;
+								background: ${gradientColors};
+								-webkit-background-clip: text;
+								-webkit-box-decoration-break: clone;
+								color: black;
+							}
+						`}
+					</style>
 					{settings.save(props)}
 				</div>
 			) : (
@@ -183,8 +196,4 @@ const FilterBlocks = (settings) => {
 	return newSettings;
 };
 
-addFilter(
-	"blocks.registerBlockType",
-	"gt/grident-text",
-	FilterBlocks,
-);
+addFilter("blocks.registerBlockType", "gt/grident-text", FilterBlocks);
