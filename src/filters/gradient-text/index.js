@@ -8,11 +8,16 @@ import {
 import { addFilter } from "@wordpress/hooks";
 import { __ } from "@wordpress/i18n";
 import { useMemo } from "@wordpress/element";
-import { useSetting } from '@wordpress/block-editor';
+import { useSetting } from "@wordpress/block-editor";
 
 import "./style.scss";
 
-const allowedBlocks = ["core/paragraph", "core/heading", "core/quote"];
+const allowedBlocks = [
+	"core/paragraph",
+	"core/heading",
+	"core/quote",
+	"core/verse",
+];
 
 const customGradientPresets = [
 	{
@@ -75,6 +80,66 @@ const customGradientPresets = [
 		gradient: "linear-gradient(135deg,#1E9600 0%, #FFF200 0%, #FF0000 100%)",
 		slug: "rastafari",
 	},
+	{
+		name: "Frozen Dreams",
+		gradient: "linear-gradient(135deg,#FD6585 0%, #0D25B9 100%)",
+		slug: "frozen-dreams",
+	},
+	{
+		name: "Winter Neva",
+		gradient: "linear-gradient(135deg,#a1c4fd 0%, #c2e9fb 100%)",
+		slug: "winter-neva",
+	},
+	{
+		name: "Dusty Grass",
+		gradient: "linear-gradient(135deg,#d4fc79 0%, #96e6a1 100%)",
+		slug: "dusty-grass",
+	},
+	{
+		name: "Tempting Azure",
+		gradient: "linear-gradient(135deg,#84fab0 0%, #8fd3f4 100%)",
+		slug: "tempting-azure",
+	},
+	{
+		name: "Heavy Rain",
+		gradient: "linear-gradient(135deg,#cfd9df 0%, #e2ebf0 100%)",
+		slug: "heavy-rain",
+	},
+	{
+		name: "Amy Crisp",
+		gradient: "linear-gradient(135deg,#a6c0fe 0%, #f68084 100%)",
+		slug: "amy-crisp",
+	},
+	{
+		name: "Mean Fruit",
+		gradient: "linear-gradient(135deg,#fccb90 0%, #d57eeb 100%)",
+		slug: "mean-fruit",
+	},
+	{
+		name: "Deep Blue",
+		gradient: "linear-gradient(135deg,#e0c3fc 0%, #8ec5fc 100%)",
+		slug: "deep-blue",
+	},
+	{
+		name: "Ripe Malinka",
+		gradient: "linear-gradient(135deg,#f093fb 0%, #f5576c 100%)",
+		slug: "ripe-malinka",
+	},
+	{
+		name: "Cloudy Knoxville",
+		gradient: "linear-gradient(135deg,#fdfbfb 0%, #ebedee 100%)",
+		slug: "cloudy-knoxville",
+	},
+	{
+		name: "Malibu Beach",
+		gradient: "linear-gradient(135deg,#4facfe 0%, #00f2fe 100%)",
+		slug: "malibu-beach",
+	},
+	{
+		name: "Sunset Bliss",
+		gradient: "linear-gradient(135deg,#ff3eab,#ffa415)",
+		slug: "sunset-bliss",
+	},
 ];
 
 const FilterBlocks = (settings) => {
@@ -104,17 +169,17 @@ const FilterBlocks = (settings) => {
 		},
 
 		edit(props) {
-			const userGradientPalette = useSetting( 'color.gradients.custom' );
-			const themeGradientPalette = useSetting( 'color.gradients.theme' );
-			const defaultGradientPalette = useSetting( 'color.gradients.default' );
+			const userGradientPalette = useSetting("color.gradients.custom");
+			const themeGradientPalette = useSetting("color.gradients.theme");
+			const defaultGradientPalette = useSetting("color.gradients.default");
 			const allGradients = useMemo(
 				() => [
-					...( customGradientPresets || [] ),
-					...( defaultGradientPalette || [] ),
-					...( themeGradientPalette || [] ),
-					...( userGradientPalette || [] ),
+					...(customGradientPresets || []),
+					...(defaultGradientPalette || []),
+					...(themeGradientPalette || []),
+					...(userGradientPalette || []),
 				],
-				[ userGradientPalette, themeGradientPalette, defaultGradientPalette ]
+				[userGradientPalette, themeGradientPalette, defaultGradientPalette],
 			);
 
 			const { attributes, setAttributes } = props;
@@ -168,7 +233,7 @@ const FilterBlocks = (settings) => {
 						<div className={`is-gradient-text ${props.attributes.uid}`}>
 							<style>
 								{`
-									.${props.attributes.uid} > * {
+									.${props.attributes.uid} > *:not(style) {
 										-webkit-text-fill-color: transparent;
 										background: ${gradientColors};
 										-webkit-background-clip: text;
@@ -192,7 +257,7 @@ const FilterBlocks = (settings) => {
 				<div className={`is-gradient-text ${props.attributes.uid}`}>
 					<style>
 						{`
-							.${props.attributes.uid} > * {
+							.${props.attributes.uid} > *:not(style) {
 								-webkit-text-fill-color: transparent;
 								background: ${gradientColors};
 								-webkit-background-clip: text;

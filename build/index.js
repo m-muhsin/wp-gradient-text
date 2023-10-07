@@ -28,7 +28,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const allowedBlocks = ["core/paragraph", "core/heading", "core/quote"];
+const allowedBlocks = ["core/paragraph", "core/heading", "core/quote", "core/verse"];
 const customGradientPresets = [{
   name: "JShine",
   gradient: "linear-gradient(135deg,#12c2e9 0%,#c471ed 50%,#f64f59 100%)",
@@ -77,6 +77,54 @@ const customGradientPresets = [{
   name: "Rastafarie",
   gradient: "linear-gradient(135deg,#1E9600 0%, #FFF200 0%, #FF0000 100%)",
   slug: "rastafari"
+}, {
+  name: "Frozen Dreams",
+  gradient: "linear-gradient(135deg,#FD6585 0%, #0D25B9 100%)",
+  slug: "frozen-dreams"
+}, {
+  name: "Winter Neva",
+  gradient: "linear-gradient(135deg,#a1c4fd 0%, #c2e9fb 100%)",
+  slug: "winter-neva"
+}, {
+  name: "Dusty Grass",
+  gradient: "linear-gradient(135deg,#d4fc79 0%, #96e6a1 100%)",
+  slug: "dusty-grass"
+}, {
+  name: "Tempting Azure",
+  gradient: "linear-gradient(135deg,#84fab0 0%, #8fd3f4 100%)",
+  slug: "tempting-azure"
+}, {
+  name: "Heavy Rain",
+  gradient: "linear-gradient(135deg,#cfd9df 0%, #e2ebf0 100%)",
+  slug: "heavy-rain"
+}, {
+  name: "Amy Crisp",
+  gradient: "linear-gradient(135deg,#a6c0fe 0%, #f68084 100%)",
+  slug: "amy-crisp"
+}, {
+  name: "Mean Fruit",
+  gradient: "linear-gradient(135deg,#fccb90 0%, #d57eeb 100%)",
+  slug: "mean-fruit"
+}, {
+  name: "Deep Blue",
+  gradient: "linear-gradient(135deg,#e0c3fc 0%, #8ec5fc 100%)",
+  slug: "deep-blue"
+}, {
+  name: "Ripe Malinka",
+  gradient: "linear-gradient(135deg,#f093fb 0%, #f5576c 100%)",
+  slug: "ripe-malinka"
+}, {
+  name: "Cloudy Knoxville",
+  gradient: "linear-gradient(135deg,#fdfbfb 0%, #ebedee 100%)",
+  slug: "cloudy-knoxville"
+}, {
+  name: "Malibu Beach",
+  gradient: "linear-gradient(135deg,#4facfe 0%, #00f2fe 100%)",
+  slug: "malibu-beach"
+}, {
+  name: "Sunset Bliss",
+  gradient: "linear-gradient(135deg,#ff3eab,#ffa415)",
+  slug: "sunset-bliss"
 }];
 const FilterBlocks = settings => {
   // If the block is not allowed, we return it unaltered.
@@ -104,9 +152,9 @@ const FilterBlocks = settings => {
       }
     },
     edit(props) {
-      const userGradientPalette = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useSetting)('color.gradients.custom');
-      const themeGradientPalette = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useSetting)('color.gradients.theme');
-      const defaultGradientPalette = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useSetting)('color.gradients.default');
+      const userGradientPalette = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useSetting)("color.gradients.custom");
+      const themeGradientPalette = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useSetting)("color.gradients.theme");
+      const defaultGradientPalette = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useSetting)("color.gradients.default");
       const allGradients = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => [...(customGradientPresets || []), ...(defaultGradientPalette || []), ...(themeGradientPalette || []), ...(userGradientPalette || [])], [userGradientPalette, themeGradientPalette, defaultGradientPalette]);
       const {
         attributes,
@@ -146,7 +194,7 @@ const FilterBlocks = settings => {
       }))), hasGradient ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
         className: `is-gradient-text ${props.attributes.uid}`
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", null, `
-									.${props.attributes.uid} > * {
+									.${props.attributes.uid} > *:not(style) {
 										-webkit-text-fill-color: transparent;
 										background: ${gradientColors};
 										-webkit-background-clip: text;
@@ -166,7 +214,7 @@ const FilterBlocks = settings => {
       return hasGradient ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
         className: `is-gradient-text ${props.attributes.uid}`
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", null, `
-							.${props.attributes.uid} > * {
+							.${props.attributes.uid} > *:not(style) {
 								-webkit-text-fill-color: transparent;
 								background: ${gradientColors};
 								-webkit-background-clip: text;
