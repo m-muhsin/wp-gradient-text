@@ -1,5 +1,5 @@
 === WP Gradient Text ===
-Contributors:      @m-muhsin
+Contributors:      @mmuhsin
 Tags:              gutenberg, gradient, block editor, text, colors
 Tested up to:      6.3
 Stable tag:        1.0.0

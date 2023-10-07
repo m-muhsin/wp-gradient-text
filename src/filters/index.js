@@ -1,1 +1,0 @@
-import './gradient-text';
