@@ -143,164 +143,162 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const allowedBlocks = ["core/paragraph", "core/heading", "core/quote", "core/verse"];
+const allowedBlocks = ['core/paragraph', 'core/heading', 'core/quote', 'core/verse'];
 const customGradientPresets = [{
-  name: "JShine",
-  gradient: "linear-gradient(135deg,#12c2e9 0%,#c471ed 50%,#f64f59 100%)",
-  slug: "jshine"
+  name: 'JShine',
+  gradient: 'linear-gradient(135deg,#12c2e9 0%,#c471ed 50%,#f64f59 100%)',
+  slug: 'jshine'
 }, {
-  name: "Cool Sky",
-  gradient: "linear-gradient(135deg,#2980b9 0%,#6dd5fa 50%,#ffffff 100%)",
-  slug: "cool-sky"
+  name: 'Cool Sky',
+  gradient: 'linear-gradient(135deg,#2980b9 0%,#6dd5fa 50%,#ffffff 100%)',
+  slug: 'cool-sky'
 }, {
-  name: "Lunada",
-  gradient: "linear-gradient(135deg,#5433FF 0%,#20BDFF 51%,#A5FECB 100%)",
-  slug: "lunada"
+  name: 'Lunada',
+  gradient: 'linear-gradient(135deg,#5433FF 0%,#20BDFF 51%,#A5FECB 100%)',
+  slug: 'lunada'
 }, {
-  name: "Blue Raspberry",
-  gradient: "linear-gradient(135deg,#00B4DB 0%,#0083B0 100%)",
-  slug: "blue-raspberry"
+  name: 'Blue Raspberry',
+  gradient: 'linear-gradient(135deg,#00B4DB 0%,#0083B0 100%)',
+  slug: 'blue-raspberry'
 }, {
-  name: "Citrus Peel",
-  gradient: "linear-gradient(135deg,#FDC830 0%,#F37335 100%)",
-  slug: "citrus-peel"
+  name: 'Citrus Peel',
+  gradient: 'linear-gradient(135deg,#FDC830 0%,#F37335 100%)',
+  slug: 'citrus-peel'
 }, {
-  name: "Sin City Red",
-  gradient: "linear-gradient(135deg,#ED213A 0%,#93291E 100%)",
-  slug: "sin-city-red"
+  name: 'Sin City Red',
+  gradient: 'linear-gradient(135deg,#ED213A 0%,#93291E 100%)',
+  slug: 'sin-city-red'
 }, {
-  name: "Blue Skies",
-  gradient: "linear-gradient(135deg,#56CCF2 0%,#2F80ED 100%)",
-  slug: "blue-skies"
+  name: 'Blue Skies',
+  gradient: 'linear-gradient(135deg,#56CCF2 0%,#2F80ED 100%)',
+  slug: 'blue-skies'
 }, {
-  name: "Mango Pulp",
-  gradient: "linear-gradient(135deg,#F09819 0%,#EDDE5D 100%)",
-  slug: "mango-pulp"
+  name: 'Mango Pulp',
+  gradient: 'linear-gradient(135deg,#F09819 0%,#EDDE5D 100%)',
+  slug: 'mango-pulp'
 }, {
-  name: "Frozen",
-  gradient: "linear-gradient(135deg,#403B4A 0%,#E7E9BB 100%)",
-  slug: "frozen"
+  name: 'Frozen',
+  gradient: 'linear-gradient(135deg,#403B4A 0%,#E7E9BB 100%)',
+  slug: 'frozen'
 }, {
-  name: "Rose Water",
-  gradient: "linear-gradient(135deg,#E55D87 0%,#5FC3E4 100%)",
-  slug: "rose-water"
+  name: 'Rose Water',
+  gradient: 'linear-gradient(135deg,#E55D87 0%,#5FC3E4 100%)',
+  slug: 'rose-water'
 }, {
-  name: "Moonlit Asteroid",
-  gradient: "linear-gradient(135deg,#0F2027 0%, #203A43 0%, #2c5364 100%)",
-  slug: "moonlit-asteroid"
+  name: 'Moonlit Asteroid',
+  gradient: 'linear-gradient(135deg,#0F2027 0%, #203A43 0%, #2c5364 100%)',
+  slug: 'moonlit-asteroid'
 }, {
-  name: "Rastafarie",
-  gradient: "linear-gradient(135deg,#1E9600 0%, #FFF200 0%, #FF0000 100%)",
-  slug: "rastafari"
+  name: 'Rastafarie',
+  gradient: 'linear-gradient(135deg,#1E9600 0%, #FFF200 0%, #FF0000 100%)',
+  slug: 'rastafari'
 }, {
-  name: "Frozen Dreams",
-  gradient: "linear-gradient(135deg,#FD6585 0%, #0D25B9 100%)",
-  slug: "frozen-dreams"
+  name: 'Frozen Dreams',
+  gradient: 'linear-gradient(135deg,#FD6585 0%, #0D25B9 100%)',
+  slug: 'frozen-dreams'
 }, {
-  name: "Winter Neva",
-  gradient: "linear-gradient(135deg,#a1c4fd 0%, #c2e9fb 100%)",
-  slug: "winter-neva"
+  name: 'Winter Neva',
+  gradient: 'linear-gradient(135deg,#a1c4fd 0%, #c2e9fb 100%)',
+  slug: 'winter-neva'
 }, {
-  name: "Dusty Grass",
-  gradient: "linear-gradient(135deg,#d4fc79 0%, #96e6a1 100%)",
-  slug: "dusty-grass"
+  name: 'Dusty Grass',
+  gradient: 'linear-gradient(135deg,#d4fc79 0%, #96e6a1 100%)',
+  slug: 'dusty-grass'
 }, {
-  name: "Tempting Azure",
-  gradient: "linear-gradient(135deg,#84fab0 0%, #8fd3f4 100%)",
-  slug: "tempting-azure"
+  name: 'Tempting Azure',
+  gradient: 'linear-gradient(135deg,#84fab0 0%, #8fd3f4 100%)',
+  slug: 'tempting-azure'
 }, {
-  name: "Heavy Rain",
-  gradient: "linear-gradient(135deg,#cfd9df 0%, #e2ebf0 100%)",
-  slug: "heavy-rain"
+  name: 'Heavy Rain',
+  gradient: 'linear-gradient(135deg,#cfd9df 0%, #e2ebf0 100%)',
+  slug: 'heavy-rain'
 }, {
-  name: "Amy Crisp",
-  gradient: "linear-gradient(135deg,#a6c0fe 0%, #f68084 100%)",
-  slug: "amy-crisp"
+  name: 'Amy Crisp',
+  gradient: 'linear-gradient(135deg,#a6c0fe 0%, #f68084 100%)',
+  slug: 'amy-crisp'
 }, {
-  name: "Mean Fruit",
-  gradient: "linear-gradient(135deg,#fccb90 0%, #d57eeb 100%)",
-  slug: "mean-fruit"
+  name: 'Mean Fruit',
+  gradient: 'linear-gradient(135deg,#fccb90 0%, #d57eeb 100%)',
+  slug: 'mean-fruit'
 }, {
-  name: "Deep Blue",
-  gradient: "linear-gradient(135deg,#e0c3fc 0%, #8ec5fc 100%)",
-  slug: "deep-blue"
+  name: 'Deep Blue',
+  gradient: 'linear-gradient(135deg,#e0c3fc 0%, #8ec5fc 100%)',
+  slug: 'deep-blue'
 }, {
-  name: "Ripe Malinka",
-  gradient: "linear-gradient(135deg,#f093fb 0%, #f5576c 100%)",
-  slug: "ripe-malinka"
+  name: 'Ripe Malinka',
+  gradient: 'linear-gradient(135deg,#f093fb 0%, #f5576c 100%)',
+  slug: 'ripe-malinka'
 }, {
-  name: "Cloudy Knoxville",
-  gradient: "linear-gradient(135deg,#fdfbfb 0%, #ebedee 100%)",
-  slug: "cloudy-knoxville"
+  name: 'Cloudy Knoxville',
+  gradient: 'linear-gradient(135deg,#fdfbfb 0%, #ebedee 100%)',
+  slug: 'cloudy-knoxville'
 }, {
-  name: "Malibu Beach",
-  gradient: "linear-gradient(135deg,#4facfe 0%, #00f2fe 100%)",
-  slug: "malibu-beach"
+  name: 'Malibu Beach',
+  gradient: 'linear-gradient(135deg,#4facfe 0%, #00f2fe 100%)',
+  slug: 'malibu-beach'
 }, {
-  name: "Sunset Bliss",
-  gradient: "linear-gradient(135deg,#ff3eaa 0%, #ffa414 100%)",
-  slug: "sunset-bliss"
+  name: 'Sunset Bliss',
+  gradient: 'linear-gradient(135deg,#ff3eaa 0%, #ffa414 100%)',
+  slug: 'sunset-bliss'
 }];
 const FilterBlocks = settings => {
-  // If the block is not allowed, we return it unaltered.
   if (!allowedBlocks.includes(settings.name)) {
     return settings;
   }
-  const newSettings = {
+  return {
     ...settings,
     attributes: {
       ...settings.attributes,
-      // spread in old attributes so we don't lose them!
       hasGradient: {
-        // Here is our new boolean attribute to know if we are having a griadent or not.
-        type: "boolean",
+        type: 'boolean',
         default: false
       },
-      // Here is our new string attribute to hold the gradient colors.
       gradientColors: {
-        type: "string",
-        default: "linear-gradient(135deg,#12c2e9 0%,#c471ed 50%,#f64f59 100%)"
+        type: 'string',
+        default: 'linear-gradient(135deg,#12c2e9 0%,#c471ed 50%,#f64f59 100%)'
       },
       uid: {
-        type: "string",
-        default: ""
+        type: 'string',
+        default: ''
       }
     },
-    edit(props) {
-      const userGradientPalette = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useSetting)("color.gradients.custom");
-      const themeGradientPalette = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useSetting)("color.gradients.theme");
-      const defaultGradientPalette = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useSetting)("color.gradients.default");
-      const allGradients = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => [...(customGradientPresets || []), ...(defaultGradientPalette || []), ...(themeGradientPalette || []), ...(userGradientPalette || [])], [userGradientPalette, themeGradientPalette, defaultGradientPalette]);
+    edit: function Edit(props) {
       const {
         attributes,
         setAttributes
       } = props;
       const {
+        uid,
         hasGradient,
         gradientColors
       } = attributes;
-      if (!props.attributes.uid) {
-        const uniqueId = `gradient-text-${Math.floor(Math.random() * 100000)}`;
-        props.setAttributes({
-          uid: uniqueId
-        });
-      }
+      (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+        if (!uid) {
+          const uniqueId = `gradient-text-${Math.floor(Math.random() * 100000)}`;
+          setAttributes({
+            uid: uniqueId
+          });
+        }
+      }, [setAttributes, uid]);
+      const userGradientPalette = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useSetting)('color.gradients.custom');
+      const themeGradientPalette = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useSetting)('color.gradients.theme');
+      const defaultGradientPalette = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useSetting)('color.gradients.default');
+      const allGradients = [...(customGradientPresets || []), ...(defaultGradientPalette || []), ...(themeGradientPalette || []), ...(userGradientPalette || [])];
       return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)("Gradient Text?")
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Gradient Text?')
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ButtonGroup, {
-        "aria-label": (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)("Gradient Text?")
-      }, ["Yes", "No"].map(has => {
+        "aria-label": (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Gradient Text?', 'gt-gradient-text')
+      }, ['Yes', 'No'].map(has => {
         return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
           key: has,
           isSmall: true,
-          variant: hasGradient === (has === "Yes" ? true : false) ? "primary" : undefined,
+          variant: hasGradient === (has === 'Yes' ? true : false) ? 'primary' : undefined,
           onClick: () => setAttributes({
-            hasGradient: has === "Yes"
+            hasGradient: has === 'Yes'
           })
         }, has);
       }))), hasGradient && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)("Choose Colors")
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Choose Colors', 'gt-gradient-text')
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.GradientPicker, {
         value: gradientColors,
         onChange: currentGradient => setAttributes({
@@ -340,9 +338,8 @@ const FilterBlocks = settings => {
 						`), settings.save(props)) : settings.save(props);
     }
   };
-  return newSettings;
 };
-(0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_3__.addFilter)("blocks.registerBlockType", "gt/grident-text", FilterBlocks);
+(0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_3__.addFilter)('blocks.registerBlockType', 'gt/grident-text', FilterBlocks);
 }();
 /******/ })()
 ;

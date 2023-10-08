@@ -17,6 +17,6 @@
  * Enqueue block scripts.
  */
 function gt_enqueue_scripts_for_blocks() {
-    wp_enqueue_script( 'gt-block-filters', plugins_url( 'build/index.js', __FILE__ ), [ 'wp-block-editor', 'wp-components', 'wp-element', 'wp-hooks', 'wp-i18n' ], '1.0.0', true );
+	wp_enqueue_script( 'gt-block-filters', plugins_url( 'build/index.js', __FILE__ ), [ 'wp-block-editor', 'wp-components', 'wp-element', 'wp-hooks', 'wp-i18n' ], '1.0.0', true );
 }
-add_action('enqueue_block_editor_assets', 'gt_enqueue_scripts_for_blocks');
+add_action( 'enqueue_block_editor_assets', 'gt_enqueue_scripts_for_blocks' );
