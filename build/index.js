@@ -266,7 +266,7 @@ const FilterBlocks = settings => {
         default: ''
       }
     },
-    edit: function (props) {
+    edit: function EditFunction(props) {
       const {
         attributes,
         setAttributes
@@ -326,7 +326,7 @@ const FilterBlocks = settings => {
         ...props
       }));
     },
-    save: function (props) {
+    save(props) {
       const {
         attributes
       } = props;

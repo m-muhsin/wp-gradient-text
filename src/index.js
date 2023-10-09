@@ -146,7 +146,7 @@ const FilterBlocks = (settings) => {
 		return settings;
 	}
 
-	const { edit : Edit, save: Save } = settings;
+	const { edit: Edit, save: Save } = settings;
 
 	return {
 		...settings,
@@ -167,7 +167,7 @@ const FilterBlocks = (settings) => {
 			},
 		},
 
-		edit: function (props) {
+		edit: function EditFunction(props) {
 			const { attributes, setAttributes } = props;
 			const { uid, hasGradient, gradientColors } = attributes;
 
@@ -230,7 +230,7 @@ const FilterBlocks = (settings) => {
 								title={__('Choose Colors', 'gt-gradient-text')}
 							>
 								<GradientPicker
-									__nextHasNoMargin={true}
+									__nextHasNoMargin
 									value={gradientColors}
 									onChange={(currentGradient) =>
 										setAttributes({
@@ -243,9 +243,7 @@ const FilterBlocks = (settings) => {
 						)}
 					</InspectorControls>
 					{hasGradient ? (
-						<div
-							className={`is-gradient-text ${uid}`}
-						>
+						<div className={`is-gradient-text ${uid}`}>
 							<style>
 								{`
 									.${uid} > *:not(style) {
@@ -265,8 +263,7 @@ const FilterBlocks = (settings) => {
 				</>
 			);
 		},
-		save: function (props) {
-
+		save(props) {
 			const { attributes } = props;
 			const { uid, hasGradient, gradientColors } = attributes;
 
@@ -292,4 +289,4 @@ const FilterBlocks = (settings) => {
 	};
 };
 
-addFilter( 'blocks.registerBlockType', 'gt/grident-text', FilterBlocks );
+addFilter('blocks.registerBlockType', 'gt/grident-text', FilterBlocks);
