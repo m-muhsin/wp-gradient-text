@@ -1,4 +1,12 @@
 # WP Gradient Text
+Contributors: mmuhsin
+Tags: block editor, gutenberg, gradient, text, typography
+Requires at least: 6.1
+Tested up to: 6.3
+Stable tag: 1.0.0
+Requires PHP: 7.0
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Add gradient text effects to Gutenberg blocks with customizable colors and predefined gradients!
 
@@ -21,13 +29,13 @@ WP Gradient Text is a simple, user-friendly plugin that adds gradient text effec
 4. Once activated, open the WordPress Block Editor and select a supported block (e.g., paragraph, heading, quote, or verse).
 5. In the block settings panel, you'll find gradient options to customize the text gradient.
 
-### Frequently Asked Questions
+## Frequently Asked Questions
 
-#### Can I use my theme's gradient presets?
+### Can I use my theme's gradient presets?
 
 Yes! If your theme defines gradient presets, they will be available in the Gradient Picker along with the plugin's predefined gradients.
 
-#### Which blocks support the gradient text effect?
+### Which blocks support the gradient text effect?
 
 Currently, the plugin supports paragraphs, headings, quotes, and verses. We plan to add more blocks in future releases.
 
