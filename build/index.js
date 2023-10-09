@@ -245,6 +245,10 @@ const FilterBlocks = settings => {
   if (!allowedBlocks.includes(settings.name)) {
     return settings;
   }
+  const {
+    edit: Edit,
+    save: Save
+  } = settings;
   return {
     ...settings,
     attributes: {
@@ -262,7 +266,7 @@ const FilterBlocks = settings => {
         default: ''
       }
     },
-    edit: function Edit(props) {
+    edit: function (props) {
       const {
         attributes,
         setAttributes
@@ -300,42 +304,52 @@ const FilterBlocks = settings => {
       }))), hasGradient && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
         title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Choose Colors', 'gt-gradient-text')
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.GradientPicker, {
+        __nextHasNoMargin: true,
         value: gradientColors,
         onChange: currentGradient => setAttributes({
           gradientColors: currentGradient
         }),
         gradients: allGradients
       }))), hasGradient ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-        className: `is-gradient-text ${props.attributes.uid}`
+        className: `is-gradient-text ${uid}`
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", null, `
-									.${props.attributes.uid} > *:not(style) {
+									.${uid} > *:not(style) {
 										-webkit-text-fill-color: transparent;
 										background: ${gradientColors};
 										-webkit-background-clip: text;
 										-webkit-box-decoration-break: clone;
 										color: black;
 									}
-								`), settings.edit(props)) : settings.edit(props));
+								`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Edit, {
+        ...props
+      })) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Edit, {
+        ...props
+      }));
     },
-    save(props) {
+    save: function (props) {
       const {
         attributes
       } = props;
       const {
+        uid,
         hasGradient,
         gradientColors
       } = attributes;
       return hasGradient ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-        className: `is-gradient-text ${props.attributes.uid}`
+        className: `is-gradient-text ${uid}`
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", null, `
-							.${props.attributes.uid} > *:not(style) {
+							.${uid} > *:not(style) {
 								-webkit-text-fill-color: transparent;
 								background: ${gradientColors};
 								-webkit-background-clip: text;
 								-webkit-box-decoration-break: clone;
 								color: black;
 							}
-						`), settings.save(props)) : settings.save(props);
+						`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Save, {
+        ...props
+      })) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Save, {
+        ...props
+      });
     }
   };
 };

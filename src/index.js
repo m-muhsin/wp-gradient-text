@@ -146,6 +146,8 @@ const FilterBlocks = (settings) => {
 		return settings;
 	}
 
+	const { edit : Edit, save: Save } = settings;
+
 	return {
 		...settings,
 		attributes: {
@@ -165,7 +167,7 @@ const FilterBlocks = (settings) => {
 			},
 		},
 
-		edit: function Edit(props) {
+		edit: function (props) {
 			const { attributes, setAttributes } = props;
 			const { uid, hasGradient, gradientColors } = attributes;
 
@@ -228,6 +230,7 @@ const FilterBlocks = (settings) => {
 								title={__('Choose Colors', 'gt-gradient-text')}
 							>
 								<GradientPicker
+									__nextHasNoMargin={true}
 									value={gradientColors}
 									onChange={(currentGradient) =>
 										setAttributes({
@@ -241,11 +244,11 @@ const FilterBlocks = (settings) => {
 					</InspectorControls>
 					{hasGradient ? (
 						<div
-							className={`is-gradient-text ${props.attributes.uid}`}
+							className={`is-gradient-text ${uid}`}
 						>
 							<style>
 								{`
-									.${props.attributes.uid} > *:not(style) {
+									.${uid} > *:not(style) {
 										-webkit-text-fill-color: transparent;
 										background: ${gradientColors};
 										-webkit-background-clip: text;
@@ -254,22 +257,24 @@ const FilterBlocks = (settings) => {
 									}
 								`}
 							</style>
-							{settings.edit(props)}
+							<Edit {...props} />
 						</div>
 					) : (
-						settings.edit(props)
+						<Edit {...props} />
 					)}
 				</>
 			);
 		},
-		save(props) {
+		save: function (props) {
+
 			const { attributes } = props;
-			const { hasGradient, gradientColors } = attributes;
+			const { uid, hasGradient, gradientColors } = attributes;
+
 			return hasGradient ? (
-				<div className={`is-gradient-text ${props.attributes.uid}`}>
+				<div className={`is-gradient-text ${uid}`}>
 					<style>
 						{`
-							.${props.attributes.uid} > *:not(style) {
+							.${uid} > *:not(style) {
 								-webkit-text-fill-color: transparent;
 								background: ${gradientColors};
 								-webkit-background-clip: text;
@@ -278,10 +283,10 @@ const FilterBlocks = (settings) => {
 							}
 						`}
 					</style>
-					{settings.save(props)}
+					<Save {...props} />
 				</div>
 			) : (
-				settings.save(props)
+				<Save {...props} />
 			);
 		},
 	};
