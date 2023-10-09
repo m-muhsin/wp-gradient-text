@@ -289,9 +289,9 @@ const FilterBlocks = settings => {
       const defaultGradientPalette = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useSetting)('color.gradients.default');
       const allGradients = [...(customGradientPresets || []), ...(defaultGradientPalette || []), ...(themeGradientPalette || []), ...(userGradientPalette || [])];
       return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Gradient Text?')
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Gradient Text?', 'wp-gradient-text')
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ButtonGroup, {
-        "aria-label": (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Gradient Text?', 'gt-gradient-text')
+        "aria-label": (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Gradient Text?', 'wp-gradient-text')
       }, ['Yes', 'No'].map(has => {
         return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
           key: has,
@@ -302,7 +302,7 @@ const FilterBlocks = settings => {
           })
         }, has);
       }))), hasGradient && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Choose Colors', 'gt-gradient-text')
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Choose Colors', 'wp-gradient-text')
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.GradientPicker, {
         __nextHasNoMargin: true,
         value: gradientColors,
@@ -353,7 +353,7 @@ const FilterBlocks = settings => {
     }
   };
 };
-(0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_3__.addFilter)('blocks.registerBlockType', 'gt/grident-text', FilterBlocks);
+(0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_3__.addFilter)('blocks.registerBlockType', 'mm/wp-grident-text', FilterBlocks);
 }();
 /******/ })()
 ;

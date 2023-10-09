@@ -195,11 +195,13 @@ const FilterBlocks = (settings) => {
 			return (
 				<>
 					<InspectorControls>
-						<PanelBody title={__('Gradient Text?')}>
+						<PanelBody
+							title={__('Gradient Text?', 'wp-gradient-text')}
+						>
 							<ButtonGroup
 								aria-label={__(
 									'Gradient Text?',
-									'gt-gradient-text'
+									'wp-gradient-text'
 								)}
 							>
 								{['Yes', 'No'].map((has) => {
@@ -227,7 +229,7 @@ const FilterBlocks = (settings) => {
 						</PanelBody>
 						{hasGradient && (
 							<PanelBody
-								title={__('Choose Colors', 'gt-gradient-text')}
+								title={__('Choose Colors', 'wp-gradient-text')}
 							>
 								<GradientPicker
 									__nextHasNoMargin
@@ -289,4 +291,4 @@ const FilterBlocks = (settings) => {
 	};
 };
 
-addFilter('blocks.registerBlockType', 'gt/grident-text', FilterBlocks);
+addFilter('blocks.registerBlockType', 'mm/wp-grident-text', FilterBlocks);
