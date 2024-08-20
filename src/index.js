@@ -14,6 +14,10 @@ const allowedBlocks = [
 	'core/heading',
 	'core/quote',
 	'core/verse',
+	'core/pullquote',
+	'core/preformatted',
+	'core/list',
+	'core/blockquote',
 ];
 
 const customGradientPresets = [
@@ -248,7 +252,7 @@ const FilterBlocks = (settings) => {
 						<div className={`is-gradient-text ${uid}`}>
 							<style>
 								{`
-									.${uid} > *:not(style) {
+									.${uid} *:not(style) {
 										-webkit-text-fill-color: transparent;
 										background: ${gradientColors};
 										-webkit-background-clip: text;
@@ -273,7 +277,7 @@ const FilterBlocks = (settings) => {
 				<div className={`is-gradient-text ${uid}`}>
 					<style>
 						{`
-							.${uid} > *:not(style) {
+							.${uid} *:not(style) {
 								-webkit-text-fill-color: transparent;
 								background: ${gradientColors};
 								-webkit-background-clip: text;

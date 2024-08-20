@@ -143,7 +143,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const allowedBlocks = ['core/paragraph', 'core/heading', 'core/quote', 'core/verse'];
+const allowedBlocks = ['core/paragraph', 'core/heading', 'core/quote', 'core/verse', 'core/pullquote', 'core/preformatted', 'core/list', 'core/blockquote'];
 const customGradientPresets = [{
   name: 'JShine',
   gradient: 'linear-gradient(135deg,#12c2e9 0%,#c471ed 50%,#f64f59 100%)',
@@ -313,7 +313,7 @@ const FilterBlocks = settings => {
       }))), hasGradient ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
         className: `is-gradient-text ${uid}`
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", null, `
-									.${uid} > *:not(style) {
+									.${uid} *:not(style) {
 										-webkit-text-fill-color: transparent;
 										background: ${gradientColors};
 										-webkit-background-clip: text;
@@ -338,7 +338,7 @@ const FilterBlocks = settings => {
       return hasGradient ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
         className: `is-gradient-text ${uid}`
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", null, `
-							.${uid} > *:not(style) {
+							.${uid} *:not(style) {
 								-webkit-text-fill-color: transparent;
 								background: ${gradientColors};
 								-webkit-background-clip: text;
